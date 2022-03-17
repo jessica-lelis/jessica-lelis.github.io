@@ -1,0 +1,17 @@
+.home {
+    width: 95%;
+    margin: 1rem auto;
+
+}
+
+img{
+   padding: 40px 40px 40px 700px;
+    width: 15%;
+    
+}
+
+@media(max-width: 450px){
+    .home {
+        width: 70%;
+    }
+}

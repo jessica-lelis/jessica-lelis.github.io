@@ -1,0 +1,56 @@
+form{
+    text-align: center;
+    width: 50%;
+    margin: 2rem auto 0 auto;
+}
+
+.buttons{
+    width: 100%;
+    text-align: center;
+    margin-right: .5rem;
+    padding-right: 1rem;
+}
+.btn{
+    background-color: #212529;
+    color: white;
+    margin-right: .5rem;
+}
+
+.btn:hover{
+    background-color: #495057;
+    color: white;
+    margin-right: .5rem;
+}
+
+
+.btn-cancel{
+    background-color: #8d243b;
+    color: white;
+}    
+
+.btn-cancel:hover{
+    background-color: #E5385E;
+}
+
+h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #212529;
+}
+
+.form{
+    width: 100%;  
+    width: 40%;
+    margin-bottom: 1rem;
+}
+
+.div{
+    background-color: #DEE2E6;
+}
+
+.msg{
+    color: white;
+}
+
+
+

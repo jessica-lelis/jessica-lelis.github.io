@@ -1,0 +1,22 @@
+<form>
+    
+    <mat-card class="div mat-elevation-z4">
+    <h1>Criar Categoria</h1>    
+    <br>
+    <mat-form-field class="form">
+        <mat-label >Descrição</mat-label>
+        <input [(ngModel)]="categoria.descricao" matInput type="text"
+         name="descricao"  placeholder="Informática, Saúde..." required>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="create()" class="btn" mat-raised-button>
+            CRIAR
+        </button>
+        <button (click)="cancel()" class="btn-cancel" mat-raised-button>
+            CANCELAR
+        </button>
+    </div>
+    </mat-card>
+
+</form>
