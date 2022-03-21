@@ -1,52 +1,64 @@
-form{
-    text-align: center;
-    width: 50%;
-    margin: 2rem auto 0 auto;
-
+form {
+  text-align: center;
+  width: 50%;
+  margin: 2rem auto 0 auto;
 }
 
-.buttons{
+.buttons {
+  width: 100%;
+  text-align: center;
+  margin-right: 0.5rem;
+  padding-right: 1rem;
+}
+.btn {
+  background-color: #212529;
+  color: white;
+  margin-right: 0.5rem;
+}
+.btn:hover {
+  background-color: #495057;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.btn-cancel {
+  background-color: #8d243b;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #e5385e;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #212529;
+}
+
+.form {
+  width: 100%;
+  width: 40%;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.div {
+  background-color: #dee2e6;
+  padding: 1.2rem;
+}
+
+@media (max-width: 450px) {
+  .form {
+    width: 70%;
+  }
+  .buttons {
     width: 100%;
     text-align: center;
-    margin-right: .5rem;
-    padding-right: 1rem;
-}
-.btn{
-    background-color: #212529;
-    color: white;
-    margin-right: .5rem;
-}
-.btn:hover{
-    background-color: #495057;
-    color: white;
-    margin-right: .5rem;
-}
-
-
-.btn-cancel{
-    background-color: #8d243b;
-    color: white;
-}    
-
-.btn-cancel:hover{
-    background-color: #E5385E;
-}
- 
-
-
-h1{
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #212529;
-}
-
-.form{
-    width: 100%;  
-    width: 40%;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-}
-
-.div{
-    background-color: #DEE2E6;
+    margin-top: 0.5rem;
+  }
+  .btn {
+    margin-bottom: 0.8rem;
+    margin-right: 0rem;
+  }
 }

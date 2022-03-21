@@ -1,80 +1,99 @@
-.content{
-    width: 90%;
-    margin: 1.4rem auto auto auto;
+.title {
+  text-align: center;
+  margin: 3rem;
 }
 
-.title{
-    text-align: center;
-    margin: 3rem;
-}
-
-.title h1{
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: white;
+.title h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
 }
 
 table {
-    width: 100%;
-    background-color: whitesmoke;
+  width: 100%;
+  background-color: whitesmoke;
 }
 
-th{
-    font-size: large;
-    color: #212529;
-    font-weight: 500;
+th {
+  font-size: large;
+  color: #212529;
+  font-weight: 500;
 }
 
-td{
- font-size: medium;
- font-weight: 500;
+td {
+  font-size: medium;
+  font-weight: 500;
 }
 
-.edit{
-    color: #495057;
-    margin-right: 1rem;
+.edit {
+  color: #495057;
+  margin-right: 1rem;
 }
 
-
-.edit:hover{
-    color: #212529;
-    margin-right: 1rem;
+.edit:hover {
+  color: #212529;
+  margin-right: 1rem;
 }
 
-.delete{
-color: #E5385E;
+.delete {
+  color: #e5385e;
 }
 
-.delete:hover{
-    color: #6d1a2c;
+.delete:hover {
+  color: #6d1a2c;
 }
 
-.mat-header{
-    width: 5rem;
+.livros {
+  margin-left: 2rem;
+  color: #495057;
 }
 
-.livros{
-    margin-left: 2rem;
-    color:#495057;
-}
-
-.livros:hover{
-    margin-left: 2rem;
-    color:#212529;
+.livros:hover {
+  margin-left: 2rem;
+  color: #212529;
 }
 
 .add-button {
-    display: flex;
-    justify-content: right;
-    padding: 1rem;
+  display: flex;
+  justify-content: right;
+  padding: 1rem;
 }
 
-.btn{
-    background-color:#212529;
-    color: white;
+.btn {
+  background-color: #212529;
+  color: white;
 }
 
 .btn:hover {
-    background-color: whitesmoke;
-    color:#495057;
+  background-color: whitesmoke;
+  color: #495057;
+}
+
+@media (max-width: 450px) {
+  .content {
+    width: 80%;
+  }
+  .mat-header {
+    width: 5rem;
+    text-align: center;
+  }
+  .livros {
+    margin-left: 0rem;
+    color: #495057;
+  }
+  .livros:hover {
+    margin-left: 0rem;
+    color: #212529;
+  }
+  th {
+    font-size: small;
+    color: #212529;
+    font-weight: 600;
+  }
+  td {
+    font-size: small;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+  }
 }

@@ -1,12 +1,14 @@
-$primary: #FFFFFF;
+/* $primary: #FFFFFF;
 $secondary: #212923;
 $warn: #8d243b;
 
-$custom-theme: ($primary, $secondary, $warn);
+$custom-theme: ($primary, $secondary, $warn); */
 
-
-
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', sans-serif; }
-
-
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}

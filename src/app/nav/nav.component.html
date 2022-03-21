@@ -1,6 +1,6 @@
 <mat-toolbar class="toolbar">
 
-    <button mat-button class="menu" (click)="drawer.toggle()"> 
+    <button mat-button class="menu" (click)="drawer.toggle()">
         <img src="../../assets/img/robob.svg">
     </button>
 
@@ -9,25 +9,25 @@
 <mat-drawer-container class="container" autosize>
 
     <mat-drawer #drawer class="sidenav" mode="side">
-        <div >
-        <button class="btn" mat-button routerLink="/" routerLinkActive="router-link-active" >
-            <i class="material-icons">home</i>Home
-        </button>
-        </div>
-        <div >
-        <button class="btn" mat-button routerLink="categorias" routerLinkActive="router-link-active" >
-            <i  class="material-icons">bookmarks</i>Categorias
-        </button>
-        </div>
-        <div >
-            <button class="btn" mat-button routerLink="livros" routerLinkActive="router-link-active" >
-                <i  class="material-icons">menu_book</i>Livros
+        <div>
+            <button class="btn" mat-button routerLink="/" routerLinkActive="router-link-active">
+                <i class="material-icons">home</i>Home
             </button>
-            </div>
+        </div>
+        <div>
+            <button class="btn" mat-button routerLink="categorias" routerLinkActive="router-link-active">
+                <i class="material-icons">bookmarks</i>Categorias
+            </button>
+        </div>
+        <div>
+            <button class="btn" mat-button routerLink="livros" routerLinkActive="router-link-active">
+                <i class="material-icons">menu_book</i>Livros
+            </button>
+        </div>
     </mat-drawer>
-  
-    <div class="sidenav-content">  
-    <router-outlet></router-outlet>
-    </div>  
+
+    <div class="sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
 
 </mat-drawer-container>
