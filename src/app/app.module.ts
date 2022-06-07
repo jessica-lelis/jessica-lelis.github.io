@@ -18,6 +18,7 @@ import { LivrosDeleteComponent } from './livros/livros-delete/livros-delete.comp
 import { LivrosReadComponent } from './livros/livros-read/livros-read.component';
 import { LivrosReadCategoriaComponent } from './livros/livros-read-categoria/livros-read-categoria.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -43,7 +44,9 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    SharedModule  ],
+    SharedModule,
+    FlexLayoutModule  
+   ],
 
   providers: [],
   bootstrap: [AppComponent]

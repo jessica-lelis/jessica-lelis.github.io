@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class CategoriasReadComponent implements OnInit {
   
   categorias: Categoria[] = []
+  id: String = ''
 
   displayedColumns: string[] = ['descricao', 'livros', 'acoes'];
   
@@ -23,13 +24,23 @@ export class CategoriasReadComponent implements OnInit {
  
   findAll(){
     this.service.findAll().subscribe(resposta => {
-      console.log(resposta);
+    //  console.log(resposta);
       this.categorias = resposta;
     })
+  }
+
+  navegarUpdate(id: any){    
+    this.router.navigate([`categorias/update/${id}`])
+  }
+
+  navegarDelete(id: any){    
+    this.router.navigate([`categorias/delete/${id}`])
   }
   
   navegarCategoriaCreate(){
     this.router.navigate(["categorias/create"])
   }
+
+
 
 }

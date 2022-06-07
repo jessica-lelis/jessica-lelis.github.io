@@ -25,27 +25,25 @@ export class LivrosReadCategoriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.id_cat = this.route.snapshot.paramMap.get('id_cat')!
+    console.log(this.id_cat);
     this.findAll();
     this.findById();
   }
 
   findAll(){
     this.service.findAllByCategoria(this.id_cat).subscribe(resposta => {
-    // console.log(resposta);
-      this.livros = resposta;
+    this.livros = resposta;
     })
   }
 
   findById(){
     this.catService.findById(this.id_cat).subscribe(resposta => {
-   //  console.log(resposta);
-     this.descricao = resposta.descricao
-
+    // console.log(resposta);
+    this.descricao = resposta.descricao
     })
   }
 
 
-  
   navegarLivrosCreate(): void{
     this.router.navigate([`categorias/${this.id_cat}/livros/create`])
   }

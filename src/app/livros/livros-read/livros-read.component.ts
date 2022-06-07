@@ -15,7 +15,7 @@ export class LivrosReadComponent implements OnInit {
   id_cat: String = ''
   id: String = ''
 
-  displayedColumns: string[] = ['id', 'titulo', 'autor','ano', 'acoes'];
+  displayedColumns: string[] = ['titulo', 'autor','ano', 'acoes'];
   
   constructor(private service: LivroService,
               private router: Router,
@@ -29,7 +29,7 @@ export class LivrosReadComponent implements OnInit {
 
   findAll(){
     this.service.findAll().subscribe(resposta => {
-      console.log(resposta);
+    //  console.log(resposta);
       this.livros = resposta;
     })
   }

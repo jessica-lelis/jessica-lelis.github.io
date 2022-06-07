@@ -8,16 +8,15 @@
   </a>
 </div>
 
-
 <table mat-table class="mat-elevation-z8" [dataSource]="categorias">
 
   <ng-container matColumnDef="descricao">
-    <th mat-header-cell class="mat-header" *matHeaderCellDef> Descrição da Categoria </th>
+    <th mat-header-cell *matHeaderCellDef> Descrição da Categoria </th>
     <td mat-cell *matCellDef="let row"> {{ row.descricao }} </td>
   </ng-container>
 
   <ng-container matColumnDef="livros">
-    <th mat-header-cell class="mat-header" *matHeaderCellDef> Livros da Categoria </th>
+    <th mat-header-cell *matHeaderCellDef> Livros da Categoria </th>
     <td mat-cell *matCellDef="let row">
       <button mat-icon-button class="livros" routerLink="{{ row.id }}/livros">
         <mat-icon>auto_stories</mat-icon>
@@ -28,15 +27,16 @@
   <ng-container matColumnDef="acoes">
     <th mat-header-cell *matHeaderCellDef class="mat-header"> Ações </th>
     <td mat-cell *matCellDef="let row">
-      <a class="edit" routerLink="update/{{ row.id }}">
+      <button mat-icon-button class="edit" (click)="navegarUpdate(row.id)">
         <i class="material-icons">edit</i>
-      </a>
-      <a class="delete" routerLink="delete/{{ row.id }}">
+      </button>
+      <button mat-icon-button class="delete" (click)="navegarDelete(row.id)">
         <i class="material-icons">delete</i>
-      </a>
+      </button>
     </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
 </table>

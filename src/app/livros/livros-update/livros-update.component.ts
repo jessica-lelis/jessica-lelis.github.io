@@ -17,18 +17,20 @@ export class LivrosUpdateComponent implements OnInit {
   titulo = new FormControl("", [Validators.minLength(3), Validators.maxLength(100)]);
   autor  = new FormControl("", [Validators.minLength(3), Validators.maxLength(100)]);
   ano = new FormControl(0, [Validators.required])
+  categoria = new FormControl(0, [Validators.required])
   id_cat: String = ''
   livro: Livro = { id: '', titulo: '', autor: '', ano: '', categoria: ''}
   categorias: Categoria[]=[]
-  
-  constructor(private service: LivroService, private router: Router, private route: ActivatedRoute, 
-    private categoriaService: CategoriaService) { }
+
+  constructor(private service: LivroService, 
+              private router: Router, 
+              private route: ActivatedRoute, 
+              private categoriaService: CategoriaService) { }
 
   ngOnInit(): void {  
     this.livro.id = this.route.snapshot.paramMap.get('id_livro')! 
     this.findById()
     this.carregaCategorias();
-    
   }
 
   carregaCategorias(){
@@ -39,10 +41,9 @@ export class LivrosUpdateComponent implements OnInit {
 
   findById(): void{
     this.service.findById(this.livro.id!).subscribe((resposta) =>{
-      this.livro = resposta
-      console.log(this.livro)
+    this.livro = resposta
+   // console.log(resposta)
     })
-
   }
 
  update(): void{
@@ -67,6 +68,10 @@ export class LivrosUpdateComponent implements OnInit {
 
     if(this.autor.invalid && name == "autor"){
       return "O campo AUTOR deve conter entre 3 e 100 caracteres";
+    }
+
+    if(this.categoria.invalid && name == "categoria"){
+      return "Escolha uma Categoria";
     }
 
     return false;
